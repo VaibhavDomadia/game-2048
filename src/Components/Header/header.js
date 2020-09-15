@@ -9,9 +9,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>2048</h2>
-                <a href = "https://github.com/VaibhavDomadia/game-2048" title = "Link to the Repository">
+            <div className = "header">
+                <h2 className = "title">2048</h2>
+                <a className = "githubicon" href = "https://github.com/VaibhavDomadia/game-2048" title = "Link to the Repository">
                     <img src = {GitHubIcon} alt = "Github Link to the Project"></img>
                 </a>
             </div>
