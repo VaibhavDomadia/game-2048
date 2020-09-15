@@ -11,7 +11,9 @@ class Header extends React.Component {
         return (
             <div>
                 <h2>2048</h2>
-                <img src = {GitHubIcon} alt = "Github Link to the Project"></img>
+                <a href = "https://github.com/VaibhavDomadia/game-2048" title = "Link to the Repository">
+                    <img src = {GitHubIcon} alt = "Github Link to the Project"></img>
+                </a>
             </div>
         );
     }
