@@ -12,19 +12,19 @@ class GamePlayOptions extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Use Arrow Keys to Play</h2>
-                <div>
-                    <div>
+            <div className = "gamePlayOptions">
+                <h2 className = "gamePlayMessage">Use Arrow Keys to Play</h2>
+                <div className = "arrowKeysContainer">
+                    <div className = "arrowKey arrowUp">
                         <img src = {ArrowUp} alt = "Arrow Up"></img>
                     </div>
-                    <div>
+                    <div className = "arrowKey">
                         <img src = {ArrowLeft} alt = "Arrow Left"></img>
                     </div>
-                    <div>
+                    <div className = "arrowKey">
                         <img src = {ArrowDown} alt = "Arrow Down"></img>
                     </div>
-                    <div>
+                    <div className = "arrowKey">
                         <img src = {ArrowRight} alt = "Arrow Right"></img>
                     </div>
                 </div>

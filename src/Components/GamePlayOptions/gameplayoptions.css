@@ -1,0 +1,33 @@
+.gamePlayOptions {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gamePlayMessage {
+    color: #1389fd;
+}
+
+.arrowKeysContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.arrowKey {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #1389fd;
+    border-radius: 4px;
+}
+
+.arrowUp {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.arrowKey img {
+    width: 32px;
+    height: 32px;
+}
