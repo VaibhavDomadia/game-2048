@@ -8,9 +8,9 @@ class ScoreBoard extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>Score:</div>
-                <div>0</div>
+            <div className = "scoreBoard">
+                <div className = "scoreTitle">Score:</div>
+                <div className = "score">0</div>
             </div>
         );
     }

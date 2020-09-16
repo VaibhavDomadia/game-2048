@@ -1,0 +1,22 @@
+.scoreBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+
+.scoreTitle {
+    background-color: #1389fd;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 24px 0px 0px 24px;
+}
+
+.score {
+    text-align: center;
+    border: 2px solid #1389fd;
+    padding: 8px;
+    color: #1389fd;
+    font-size: 24px;
+    border-radius: 0px 24px 24px 0px;
+}
