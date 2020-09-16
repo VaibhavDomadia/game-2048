@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/game-2048/static/css/main.c04d032a.chunk.css",
+    "main.js": "/game-2048/static/js/main.e0f943d5.chunk.js",
+    "main.js.map": "/game-2048/static/js/main.e0f943d5.chunk.js.map",
+    "runtime-main.js": "/game-2048/static/js/runtime-main.fc6511cb.js",
+    "runtime-main.js.map": "/game-2048/static/js/runtime-main.fc6511cb.js.map",
+    "static/js/2.60f9dead.chunk.js": "/game-2048/static/js/2.60f9dead.chunk.js",
+    "static/js/2.60f9dead.chunk.js.map": "/game-2048/static/js/2.60f9dead.chunk.js.map",
+    "index.html": "/game-2048/index.html",
+    "precache-manifest.072c448eba4f3553345265bb52909a4c.js": "/game-2048/precache-manifest.072c448eba4f3553345265bb52909a4c.js",
+    "service-worker.js": "/game-2048/service-worker.js",
+    "static/css/main.c04d032a.chunk.css.map": "/game-2048/static/css/main.c04d032a.chunk.css.map",
+    "static/js/2.60f9dead.chunk.js.LICENSE.txt": "/game-2048/static/js/2.60f9dead.chunk.js.LICENSE.txt",
+    "static/media/arrowdown.svg": "/game-2048/static/media/arrowdown.0bda22ab.svg",
+    "static/media/arrowleft.svg": "/game-2048/static/media/arrowleft.fc7c38a8.svg",
+    "static/media/arrowright.svg": "/game-2048/static/media/arrowright.17866ce5.svg",
+    "static/media/arrowup.svg": "/game-2048/static/media/arrowup.984a6c88.svg",
+    "static/media/githubicon.svg": "/game-2048/static/media/githubicon.a2594cec.svg",
+    "static/media/logo.svg": "/game-2048/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc6511cb.js",
+    "static/js/2.60f9dead.chunk.js",
+    "static/css/main.c04d032a.chunk.css",
+    "static/js/main.e0f943d5.chunk.js"
+  ]
+}
