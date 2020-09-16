@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header/header'
 import GameArena from './Components/GameArena/gamearena';
 import GamePlayOptions from './Components/GamePlayOptions/gameplayoptions';
+import ScoreBoard from './Components/ScoreBoard/scoreboard';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <GamePlayOptions/>
+                <ScoreBoard/>
             </div>
         );
     }
