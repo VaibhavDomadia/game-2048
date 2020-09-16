@@ -127,6 +127,10 @@ class GameArena extends React.Component {
      * @param event recieves the event that was generated as a result of on key press on the game.
      */
     move(event) {
+        if(this.state.gameWon) {
+            return;
+        }
+
         let direction = event.keyCode - 37;
         if(0 <= direction && direction < 4) {
             switch(direction) {
