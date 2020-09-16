@@ -8,12 +8,13 @@ class Board extends React.Component {
     }
 
     render() {
+        const {board} = this.props;
+
         return (
             <div className = "board">
-                <Row/>
-                <Row/>
-                <Row/>
-                <Row/>
+                {
+                    board.map((row, index) => <Row key = {index} cellValues = {row}/>)
+                }
             </div>
         );
     }

@@ -8,12 +8,13 @@ class Row extends React.Component {
     }
 
     render() {
+        const {cellValues} = this.props;
+
         return (
             <div className = "row">
-                <Cell/>
-                <Cell/>
-                <Cell/>
-                <Cell/>
+                {
+                    cellValues.map((cell, index) => <Cell key = {index} value = {cell}/>)
+                }
             </div>
         );
     }

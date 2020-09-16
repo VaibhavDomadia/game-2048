@@ -7,8 +7,10 @@ class Cell extends React.Component {
     }
 
     render() {
+        const {value} = this.props;
+
         return (
-            <div className = "cell"></div>
+            <div className = "cell">{value}</div>
         );
     }
 }
