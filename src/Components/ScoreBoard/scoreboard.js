@@ -10,7 +10,7 @@ class ScoreBoard extends React.Component {
         return (
             <div className = "scoreBoard">
                 <div className = "scoreTitle">Score:</div>
-                <div className = "score">0</div>
+                <div className = "score">{this.props.score}</div>
             </div>
         );
     }
