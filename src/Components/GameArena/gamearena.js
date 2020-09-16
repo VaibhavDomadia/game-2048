@@ -21,6 +21,7 @@ class GameArena extends React.Component {
         this.moveUp = this.moveUp.bind(this);
         this.moveDown = this.moveDown.bind(this);
         this.shrinkArray = this.shrinkArray.bind(this);
+        this.restartGame = this.restartGame.bind(this);
 
         this.state = {
             board: this.initializeBoard()
@@ -383,6 +384,15 @@ class GameArena extends React.Component {
         this.setState({board: updatedBoard});
     }
 
+    /**
+     * This function restarts the game.
+     * 
+     * It do so by calling initializeBoard() method and set to the current state of the board.
+     */
+    restartGame() {
+        this.setState({board: this.initializeBoard()})
+    }
+
     render() {
         const {board} = this.state;
         return (
@@ -390,7 +400,7 @@ class GameArena extends React.Component {
                 <GamePlayOptions/>
                 <Board board = {board}/>
                 <ScoreBoard/>
-                <RestartButton/>
+                <RestartButton restartGame = {this.restartGame}/>
             </div>
         );
     }

@@ -8,7 +8,7 @@ class RestartButton extends React.Component {
 
     render() {
         return (
-            <button className = "restartButton">Restart</button>
+            <button className = "restartButton" onClick = {this.props.restartGame}>Restart</button>
         );
     }
 }
