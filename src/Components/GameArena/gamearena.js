@@ -12,19 +12,48 @@ class GameArena extends React.Component {
         super(props);
 
         this.initializeBoard = this.initializeBoard.bind(this);
+        this.generateRandomCellValue = this.generateRandomCellValue.bind(this);
 
         this.state = {
             board: this.initializeBoard()
         }
     }
 
+    /**
+     * This funtion is used to create the initial state of the board.
+     * 
+     * First it assign zero value to each cell of the board.
+     * 
+     * Then it creates 2 random number using generateRandomCellValue() function
+     * and assign it to some random position/s in the board.
+     * 
+     * @returns 2D array of values that represent the state of board.
+     */
     initializeBoard() {
         let board = new Array(BOARD_SIZE);
         for(let i = 0 ; i < BOARD_SIZE ; i++) {
             board[i] = new Array(BOARD_SIZE).fill(0);
         }
 
+        let row = Math.floor(Math.random()*4);
+        let column = Math.floor(Math.random()*4);
+        board[row][column] = this.generateRandomCellValue();
+        
+        row = Math.floor(Math.random()*4);
+        column = Math.floor(Math.random()*4);
+        board[row][column] = this.generateRandomCellValue();
+
         return board;
+    }
+
+    /**
+     * This function is used to generate either 2 or 4 using random number generator.
+     * 
+     * @returns 2 or 4 as value.
+     */
+    generateRandomCellValue() {
+        let value = Math.floor(Math.random()*2) + 1;
+        return value * 2;
     }
 
     render() {
