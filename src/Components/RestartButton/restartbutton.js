@@ -8,7 +8,7 @@ class RestartButton extends React.Component {
 
     render() {
         return (
-            <button>Restart</button>
+            <button className = "restartButton">Restart</button>
         );
     }
 }
