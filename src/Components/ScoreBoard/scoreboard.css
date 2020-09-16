@@ -1,12 +1,14 @@
 .scoreBoard {
     display: grid;
-    grid-template-columns: 1fr 1fr;    
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
 }
 
 .scoreTitle {
     background-color: #1389fd;
     text-align: center;
-    padding: 8px;
+    padding: 8px 32px;
     color: #ffffff;
     font-size: 24px;
     border-radius: 24px 0px 0px 24px;

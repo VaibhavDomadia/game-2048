@@ -1,5 +1,8 @@
 import React from 'react';
+import GamePlayOptions from '../GamePlayOptions/gameplayoptions'
 import Board from '../Board/board'
+import ScoreBoard from '../ScoreBoard/scoreboard'
+import RestartButton from '../RestartButton/restartbutton'
 import './gamearena.css';
 
 class GameArena extends React.Component {
@@ -9,8 +12,11 @@ class GameArena extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className = "gameArena">
+                <GamePlayOptions/>
                 <Board/>
+                <ScoreBoard/>
+                <RestartButton/>
             </div>
         );
     }
