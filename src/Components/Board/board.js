@@ -8,13 +8,17 @@ class Board extends React.Component {
     }
 
     render() {
-        const {board} = this.props;
+        const {board, gameWon, gameOver} = this.props;
 
         return (
-            <div className = "board">
-                {
-                    board.map((row, index) => <Row key = {index} cellValues = {row}/>)
-                }
+            <div className = "boardContainer">
+                {gameWon && <div className = "gameWonBanner">You Won!</div>}
+                {!gameWon && gameOver && <div className = "gameOverBanner">Game Over!</div>}
+                <div className = "board">
+                    {
+                        board.map((row, index) => <Row key = {index} cellValues = {row}/>)
+                    }
+                </div>
             </div>
         );
     }

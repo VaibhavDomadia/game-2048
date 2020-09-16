@@ -22,9 +22,14 @@ class GameArena extends React.Component {
         this.moveDown = this.moveDown.bind(this);
         this.shrinkArray = this.shrinkArray.bind(this);
         this.restartGame = this.restartGame.bind(this);
+        this.isGameOver = this.isGameOver.bind(this);
+        this.isGameWon = this.isGameWon.bind(this);
 
         this.state = {
-            board: this.initializeBoard()
+            board: this.initializeBoard(),
+            gameOver: false,
+            gameWon: false,
+            score: 0
         }
     }
 
@@ -63,6 +68,26 @@ class GameArena extends React.Component {
         row = Math.floor(Math.random()*4);
         column = Math.floor(Math.random()*4);
         board[row][column] = this.generateRandomCellValue();
+
+        board[0][0] = 64;
+        board[0][1] = 8;
+        board[0][2] = 128;
+        board[0][3] = 64;
+        board[1][0] = 4;
+        board[1][1] = 1024;
+        board[1][2] = 32;
+        board[1][3] = 8;
+        board[2][0] = 8;
+        board[2][1] = 1024;
+        board[2][2] = 64;
+        board[2][3] = 16;
+        board[3][0] = 16;
+        board[3][1] = 32;
+        board[3][2] = 16;
+        board[3][3] = 32;
+        
+        
+        
 
         return board;
     }
@@ -128,6 +153,16 @@ class GameArena extends React.Component {
                 case 3:
                     this.moveDown();
                     break;
+            }
+
+            const isGameOver = this.isGameOver();
+            if(isGameOver) {
+                this.setState({gameOver: true});
+            }
+
+            const isGameWon = this.isGameWon();
+            if(isGameWon) {
+                this.setState({gameWon: true});
             }
         }
     }
@@ -387,18 +422,82 @@ class GameArena extends React.Component {
     /**
      * This function restarts the game.
      * 
-     * It do so by calling initializeBoard() method and set to the current state of the board.
+     * It do so by calling initializeBoard() method and set to the current state of the board
+     * and setting gameWon and gameOver state to false.
      */
     restartGame() {
-        this.setState({board: this.initializeBoard()})
+        this.setState(
+            {
+                board: this.initializeBoard(),
+                gameOver: false,
+                gameWon: false,
+                score: 0
+            }
+        );
+    }
+
+    /**
+     * This function checks whether any move is possible or not.
+     * If not then it return true denoting that game is over.
+     * 
+     * @returns true if game is over else return false.
+     */
+    isGameOver() {
+        const {board} = this.state;
+
+        for(let i=0 ; i<BOARD_SIZE ; i++) {
+            for(let j=0 ; j<BOARD_SIZE ; j++) {
+                if(board[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+
+        for(let i=0 ; i<BOARD_SIZE ; i++) {
+            for(let j=1 ; j<BOARD_SIZE ; j++) {
+                if(board[i][j] == board[i][j-1]) {
+                    return false;
+                }
+            }
+        }
+
+        for(let j=0 ; j<BOARD_SIZE ; j++) {
+            for(let i=1 ; i<BOARD_SIZE ; i++) {
+                if(board[i][j] == board[i-1][j]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * This function checks whether any cell value is equal to 2048 value or not.
+     * If yes then this function returns true denoting that game is completed.
+     * 
+     * @returns true is game is completed else false;
+     */
+    isGameWon() {
+        const {board} = this.state;
+
+        for(let i=0 ; i<BOARD_SIZE ; i++) {
+            for(let j=0 ; j<BOARD_SIZE ; j++) {
+                if(board[i][j] == 2048) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     render() {
-        const {board} = this.state;
+        const {board, gameOver, gameWon} = this.state;
         return (
             <div className = "gameArena">
                 <GamePlayOptions/>
-                <Board board = {board}/>
+                <Board gameWon = {gameWon} gameOver = {gameOver} board = {board}/>
                 <ScoreBoard/>
                 <RestartButton restartGame = {this.restartGame}/>
             </div>
