@@ -5,6 +5,7 @@ import Header from './Components/Header/header'
 import GameArena from './Components/GameArena/gamearena';
 import GamePlayOptions from './Components/GamePlayOptions/gameplayoptions';
 import ScoreBoard from './Components/ScoreBoard/scoreboard';
+import RestartButton from './Components/RestartButton/restartbutton';
 
 class App extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <ScoreBoard/>
+                <RestartButton/>
             </div>
         );
     }
