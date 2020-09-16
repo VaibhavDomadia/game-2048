@@ -69,26 +69,6 @@ class GameArena extends React.Component {
         column = Math.floor(Math.random()*4);
         board[row][column] = this.generateRandomCellValue();
 
-        board[0][0] = 64;
-        board[0][1] = 8;
-        board[0][2] = 128;
-        board[0][3] = 64;
-        board[1][0] = 4;
-        board[1][1] = 1024;
-        board[1][2] = 32;
-        board[1][3] = 8;
-        board[2][0] = 8;
-        board[2][1] = 1024;
-        board[2][2] = 64;
-        board[2][3] = 16;
-        board[3][0] = 16;
-        board[3][1] = 32;
-        board[3][2] = 16;
-        board[3][3] = 32;
-        
-        
-        
-
         return board;
     }
 
@@ -113,11 +93,14 @@ class GameArena extends React.Component {
      */
     shrinkArray(array) {
         let shrinkedArray = [];
+
+        let addScore = 0;
         
         for(let i=0 ; i<array.length ; i++) {
             if(i+1 < array.length) {
                 if(array[i] == array[i+1]) {
                     shrinkedArray.push(array[i]*2);
+                    addScore += array[i]*2;
                     i++;
                 }
                 else {
@@ -127,6 +110,12 @@ class GameArena extends React.Component {
             else {
                 shrinkedArray.push(array[i]);
             }
+        }
+
+        if(addScore != 0) {
+            this.setState((prevousState, props) => {
+                return {score: prevousState.score + addScore};
+            });
         }
 
         return shrinkedArray;
@@ -493,12 +482,12 @@ class GameArena extends React.Component {
     }
 
     render() {
-        const {board, gameOver, gameWon} = this.state;
+        const {board, gameOver, gameWon, score} = this.state;
         return (
             <div className = "gameArena">
                 <GamePlayOptions/>
                 <Board gameWon = {gameWon} gameOver = {gameOver} board = {board}/>
-                <ScoreBoard/>
+                <ScoreBoard score = {score}/>
                 <RestartButton restartGame = {this.restartGame}/>
             </div>
         );
