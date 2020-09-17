@@ -4,7 +4,7 @@ This project is the implementation of classic 2048 Game made using React JS.
 
 ### Introduction to Game:
 
-In this game, player is given a 4 X 4 board and some initial state in the board filled with 2's and 4's. Then the player can make left, right, up and down move based on the movement being possible and based on the move if two values are same then they got merged into a single cell. This way player has to make one cell value equals to 2048 in order to win. If the player reaches a state where no further moves are possible, then he loses the game.
+In this game, player is given a 4 X 4 board and some initial state in the board filled with 2's and 4's. Then the player can make left, right, up or down move only if the move is valid. Then based on the move if two values are same then they got merged into a single cell such that it is the summation of both the cell. This way player has to make one cell value equals to 2048 in order to win. If the player reaches a state where no further moves are possible, then he loses the game.
 
 ### Play Game:
 
