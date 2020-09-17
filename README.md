@@ -1,6 +1,6 @@
 ## 2048 Game
 
-This project is the implementation of classic 2048 Game.
+This project is the implementation of classic 2048 Game made using React JS.
 
 ### Introduction to Game:
 
