@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header/header'
-import GameArena from './Components/GameArena/gamearena';
+import Header from './Components/Header/header';
 import NavigationDrawer from './Components/NavigationDrawer/navigationdrawer';
+import Classic2048 from './Components/Classic2048/classic2048'
 
 class App extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class App extends React.Component {
             <div>
                 <Header isDrawerOpen = {this.state.isDrawerOpen} toggleNavigationDrawer = {this.toggleNavigationDrawer}/>
                 <NavigationDrawer isDrawerOpen = {this.state.isDrawerOpen}/>
-                <GameArena/>
+                <Classic2048/>
             </div>
         );
     }
