@@ -13,7 +13,6 @@ class GameArena extends React.Component {
 
         this.getEmptyBoard = this.getEmptyBoard.bind(this);
         this.initializeBoard = this.initializeBoard.bind(this);
-        this.generateRandomCellValue = this.generateRandomCellValue.bind(this);
         this.move = this.move.bind(this);
         document.onkeyup = this.move;
         this.moveLeft = this.moveLeft.bind(this);
@@ -63,29 +62,20 @@ class GameArena extends React.Component {
 
         let row = Math.floor(Math.random()*4);
         let column = Math.floor(Math.random()*4);
-        board[row][column] = this.generateRandomCellValue();
+        board[row][column] = this.props.generateRandomCellValue();
         
         row = Math.floor(Math.random()*4);
         column = Math.floor(Math.random()*4);
-        board[row][column] = this.generateRandomCellValue();
+        board[row][column] = this.props.generateRandomCellValue();
 
         return board;
     }
 
     /**
-     * This function is used to generate either 2 or 4 using random number generator.
-     * 
-     * @returns 2 or 4 as value.
-     */
-    generateRandomCellValue() {
-        let value = Math.floor(Math.random()*2) + 1;
-        return value * 2;
-    }
-
-    /**
      * This function takes an array as input which basically represent a row or a column
      * in the board and then shrinks it from left to right in a way that if two consecutive values 
-     * are same then both are summed up and assigned to the first value and second value is deleted.
+     * are same then both are merged up by logic defined in getMergedCellValue() function and then
+     * assigned to the first value and second value is deleted.
      * 
      * @param array The array which needs to be shrinked.
      * 
@@ -99,8 +89,8 @@ class GameArena extends React.Component {
         for(let i=0 ; i<array.length ; i++) {
             if(i+1 < array.length) {
                 if(array[i] == array[i+1]) {
-                    shrinkedArray.push(array[i]*2);
-                    addScore += array[i]*2;
+                    shrinkedArray.push(this.props.getMergedCellValue(array[i]));
+                    addScore += this.props.getScoreFromMerging(array[i]);
                     i++;
                 }
                 else {
@@ -216,7 +206,7 @@ class GameArena extends React.Component {
             if(emptyCellNumber.length != 0) {
                 let index = Math.floor(Math.random()*emptyCellNumber.length);
                 let positionToFill = emptyCellNumber[index];
-                updatedBoard[positionToFill][BOARD_SIZE-1] = this.generateRandomCellValue();
+                updatedBoard[positionToFill][BOARD_SIZE-1] = this.props.generateRandomCellValue();
             }
         }
 
@@ -279,7 +269,7 @@ class GameArena extends React.Component {
             if(emptyCellNumber.length != 0) {
                 let index = Math.floor(Math.random()*emptyCellNumber.length);
                 let positionToFill = emptyCellNumber[index];
-                updatedBoard[positionToFill][0] = this.generateRandomCellValue();
+                updatedBoard[positionToFill][0] = this.props.generateRandomCellValue();
             }
         }
 
@@ -342,7 +332,7 @@ class GameArena extends React.Component {
             if(emptyCellNumber.length != 0) {
                 let index = Math.floor(Math.random()*emptyCellNumber.length);
                 let positionToFill = emptyCellNumber[index];
-                updatedBoard[BOARD_SIZE-1][positionToFill] = this.generateRandomCellValue();
+                updatedBoard[BOARD_SIZE-1][positionToFill] = this.props.generateRandomCellValue();
             }
         }
 
@@ -405,7 +395,7 @@ class GameArena extends React.Component {
             if(emptyCellNumber.length != 0) {
                 let index = Math.floor(Math.random()*emptyCellNumber.length);
                 let positionToFill = emptyCellNumber[index];
-                updatedBoard[0][positionToFill] = this.generateRandomCellValue();
+                updatedBoard[0][positionToFill] = this.props.generateRandomCellValue();
             }
         }
 
@@ -466,7 +456,7 @@ class GameArena extends React.Component {
     }
 
     /**
-     * This function checks whether any cell value is equal to 2048 value or not.
+     * This function checks whether any cell value is equal to the value defined in gameWonCellValue or not.
      * If yes then this function returns true denoting that game is completed.
      * 
      * @returns true is game is completed else false;
@@ -476,7 +466,7 @@ class GameArena extends React.Component {
 
         for(let i=0 ; i<BOARD_SIZE ; i++) {
             for(let j=0 ; j<BOARD_SIZE ; j++) {
-                if(board[i][j] == 2048) {
+                if(board[i][j] == this.props.gameWonCellValue) {
                     return true;
                 }
             }
