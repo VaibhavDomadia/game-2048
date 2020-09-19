@@ -1,28 +1,32 @@
 {
   "files": {
-    "main.css": "/game-2048/static/css/main.c04d032a.chunk.css",
-    "main.js": "/game-2048/static/js/main.e0f943d5.chunk.js",
-    "main.js.map": "/game-2048/static/js/main.e0f943d5.chunk.js.map",
+    "main.css": "/game-2048/static/css/main.d4c01dfc.chunk.css",
+    "main.js": "/game-2048/static/js/main.601d99fc.chunk.js",
+    "main.js.map": "/game-2048/static/js/main.601d99fc.chunk.js.map",
     "runtime-main.js": "/game-2048/static/js/runtime-main.fc6511cb.js",
     "runtime-main.js.map": "/game-2048/static/js/runtime-main.fc6511cb.js.map",
-    "static/js/2.60f9dead.chunk.js": "/game-2048/static/js/2.60f9dead.chunk.js",
-    "static/js/2.60f9dead.chunk.js.map": "/game-2048/static/js/2.60f9dead.chunk.js.map",
+    "static/js/2.82077fbc.chunk.js": "/game-2048/static/js/2.82077fbc.chunk.js",
+    "static/js/2.82077fbc.chunk.js.map": "/game-2048/static/js/2.82077fbc.chunk.js.map",
     "index.html": "/game-2048/index.html",
-    "precache-manifest.dc71ba5499f62b849912f87e637b4db5.js": "/game-2048/precache-manifest.dc71ba5499f62b849912f87e637b4db5.js",
+    "precache-manifest.a3cb7a139c43761c1c86f447289092e3.js": "/game-2048/precache-manifest.a3cb7a139c43761c1c86f447289092e3.js",
     "service-worker.js": "/game-2048/service-worker.js",
-    "static/css/main.c04d032a.chunk.css.map": "/game-2048/static/css/main.c04d032a.chunk.css.map",
-    "static/js/2.60f9dead.chunk.js.LICENSE.txt": "/game-2048/static/js/2.60f9dead.chunk.js.LICENSE.txt",
+    "static/css/main.d4c01dfc.chunk.css.map": "/game-2048/static/css/main.d4c01dfc.chunk.css.map",
+    "static/js/2.82077fbc.chunk.js.LICENSE.txt": "/game-2048/static/js/2.82077fbc.chunk.js.LICENSE.txt",
     "static/media/arrowdown.svg": "/game-2048/static/media/arrowdown.0bda22ab.svg",
     "static/media/arrowleft.svg": "/game-2048/static/media/arrowleft.fc7c38a8.svg",
     "static/media/arrowright.svg": "/game-2048/static/media/arrowright.17866ce5.svg",
     "static/media/arrowup.svg": "/game-2048/static/media/arrowup.984a6c88.svg",
+    "static/media/classic.svg": "/game-2048/static/media/classic.dc7ad66c.svg",
+    "static/media/close.svg": "/game-2048/static/media/close.a3eb59d2.svg",
     "static/media/githubicon.svg": "/game-2048/static/media/githubicon.a2594cec.svg",
-    "static/media/logo.svg": "/game-2048/static/media/logo.5d5d9eef.svg"
+    "static/media/logo.svg": "/game-2048/static/media/logo.5d5d9eef.svg",
+    "static/media/menu.svg": "/game-2048/static/media/menu.88dde481.svg",
+    "static/media/reverse.svg": "/game-2048/static/media/reverse.9e3f98ec.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fc6511cb.js",
-    "static/js/2.60f9dead.chunk.js",
-    "static/css/main.c04d032a.chunk.css",
-    "static/js/main.e0f943d5.chunk.js"
+    "static/js/2.82077fbc.chunk.js",
+    "static/css/main.d4c01dfc.chunk.css",
+    "static/js/main.601d99fc.chunk.js"
   ]
 }
