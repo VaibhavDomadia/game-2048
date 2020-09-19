@@ -3,13 +3,14 @@
     box-sizing: border-box;
     height: 100%;
     box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.25);
-    left: -20%;
+    left: -25%;
     top: 0;
     width: 20%;
     padding: 32px;
     padding-top: 80px;
     z-index: 1;
     background-color: #ffffff;
+    transition: 0.3s;
 }
 
 .navigationItemGroupTitle {
@@ -19,8 +20,22 @@
 .navigationItem {
     color: #404040;
     padding: 8px 16px;
-    border-radius: 16px;
+    border-radius: 24px;
     margin: 4px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.navigationItem img {
+    width: 24px;
+    height: 24px;
+}
+
+.navigationItem div {
+    justify-self: start;
+    padding-left: 8px;
 }
 
 .navigationItem:hover:not(.active) {
