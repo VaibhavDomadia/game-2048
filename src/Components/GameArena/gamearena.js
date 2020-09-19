@@ -74,7 +74,8 @@ class GameArena extends React.Component {
     /**
      * This function takes an array as input which basically represent a row or a column
      * in the board and then shrinks it from left to right in a way that if two consecutive values 
-     * are same then both are summed up and assigned to the first value and second value is deleted.
+     * are same then both are merged up by logic defined in getMergedCellValue() function and then
+     * assigned to the first value and second value is deleted.
      * 
      * @param array The array which needs to be shrinked.
      * 
@@ -455,7 +456,7 @@ class GameArena extends React.Component {
     }
 
     /**
-     * This function checks whether any cell value is equal to 2048 value or not.
+     * This function checks whether any cell value is equal to the value defined in gameWonCellValue or not.
      * If yes then this function returns true denoting that game is completed.
      * 
      * @returns true is game is completed else false;

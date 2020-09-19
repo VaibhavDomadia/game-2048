@@ -7,7 +7,7 @@ class NavigationDrawer extends React.Component {
     }
 
     render() {
-        const {isDrawerOpen} = this.props;
+        const {currentGameName, isDrawerOpen, changeCurrentGame} = this.props;
         
         let style = {};
         if(isDrawerOpen) {
@@ -20,8 +20,8 @@ class NavigationDrawer extends React.Component {
         return (
             <div className = "navigationDrawer" style = {style}>
                 <h4 className = "navigationItemGroupTitle">VARIANTS</h4>
-                <div className = "navigationItem">Classic 2048</div>
-                <div className = "navigationItem">Reverse 2048</div>
+                <div className = {currentGameName == 'CLASSIC2048' ? 'navigationItem active' : 'navigationItem'} onClick = {() => changeCurrentGame('CLASSIC2048')}>Classic 2048</div>
+                <div className = {currentGameName == 'REVERSE2048' ? 'navigationItem active' : 'navigationItem'} onClick = {() => changeCurrentGame('REVERSE2048')}>Reverse 2048</div>
             </div>
         );
     }
