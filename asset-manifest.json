@@ -1,32 +1,34 @@
 {
   "files": {
-    "main.css": "/game-2048/static/css/main.d4c01dfc.chunk.css",
-    "main.js": "/game-2048/static/js/main.601d99fc.chunk.js",
-    "main.js.map": "/game-2048/static/js/main.601d99fc.chunk.js.map",
+    "main.css": "/game-2048/static/css/main.0bb3e733.chunk.css",
+    "main.js": "/game-2048/static/js/main.a9efedde.chunk.js",
+    "main.js.map": "/game-2048/static/js/main.a9efedde.chunk.js.map",
     "runtime-main.js": "/game-2048/static/js/runtime-main.fc6511cb.js",
     "runtime-main.js.map": "/game-2048/static/js/runtime-main.fc6511cb.js.map",
-    "static/js/2.82077fbc.chunk.js": "/game-2048/static/js/2.82077fbc.chunk.js",
-    "static/js/2.82077fbc.chunk.js.map": "/game-2048/static/js/2.82077fbc.chunk.js.map",
+    "static/js/2.0d2e0353.chunk.js": "/game-2048/static/js/2.0d2e0353.chunk.js",
+    "static/js/2.0d2e0353.chunk.js.map": "/game-2048/static/js/2.0d2e0353.chunk.js.map",
     "index.html": "/game-2048/index.html",
-    "precache-manifest.a3cb7a139c43761c1c86f447289092e3.js": "/game-2048/precache-manifest.a3cb7a139c43761c1c86f447289092e3.js",
+    "precache-manifest.701b3dbdd41011ec8cb047602e68254d.js": "/game-2048/precache-manifest.701b3dbdd41011ec8cb047602e68254d.js",
     "service-worker.js": "/game-2048/service-worker.js",
-    "static/css/main.d4c01dfc.chunk.css.map": "/game-2048/static/css/main.d4c01dfc.chunk.css.map",
-    "static/js/2.82077fbc.chunk.js.LICENSE.txt": "/game-2048/static/js/2.82077fbc.chunk.js.LICENSE.txt",
+    "static/css/main.0bb3e733.chunk.css.map": "/game-2048/static/css/main.0bb3e733.chunk.css.map",
+    "static/js/2.0d2e0353.chunk.js.LICENSE.txt": "/game-2048/static/js/2.0d2e0353.chunk.js.LICENSE.txt",
     "static/media/arrowdown.svg": "/game-2048/static/media/arrowdown.0bda22ab.svg",
     "static/media/arrowleft.svg": "/game-2048/static/media/arrowleft.fc7c38a8.svg",
     "static/media/arrowright.svg": "/game-2048/static/media/arrowright.17866ce5.svg",
     "static/media/arrowup.svg": "/game-2048/static/media/arrowup.984a6c88.svg",
     "static/media/classic.svg": "/game-2048/static/media/classic.dc7ad66c.svg",
-    "static/media/close.svg": "/game-2048/static/media/close.a3eb59d2.svg",
-    "static/media/githubicon.svg": "/game-2048/static/media/githubicon.a2594cec.svg",
+    "static/media/classicblue.svg": "/game-2048/static/media/classicblue.4de5964d.svg",
+    "static/media/close.svg": "/game-2048/static/media/close.d0532851.svg",
+    "static/media/githubicon.svg": "/game-2048/static/media/githubicon.cfb247e0.svg",
     "static/media/logo.svg": "/game-2048/static/media/logo.5d5d9eef.svg",
-    "static/media/menu.svg": "/game-2048/static/media/menu.88dde481.svg",
-    "static/media/reverse.svg": "/game-2048/static/media/reverse.9e3f98ec.svg"
+    "static/media/menu.svg": "/game-2048/static/media/menu.2b0d2d37.svg",
+    "static/media/reverse.svg": "/game-2048/static/media/reverse.9e3f98ec.svg",
+    "static/media/reverseblue.svg": "/game-2048/static/media/reverseblue.6125f68d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fc6511cb.js",
-    "static/js/2.82077fbc.chunk.js",
-    "static/css/main.d4c01dfc.chunk.css",
-    "static/js/main.601d99fc.chunk.js"
+    "static/js/2.0d2e0353.chunk.js",
+    "static/css/main.0bb3e733.chunk.css",
+    "static/js/main.a9efedde.chunk.js"
   ]
 }
