@@ -5,7 +5,7 @@
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
     align-items: center;
     z-index: 2;
-    background-color: #ffffff;
+    background-color: #202020;
     position: relative;
 }
 
@@ -20,13 +20,13 @@
 }
 
 .menuIcon:hover {
-    background-color: #eeeeee;
+    background-color: #444444;
 }
 
 .title {
     margin: 0px;
     padding-left: 8px;
-    color: #1389fd;
+    color: #dfdfdf;
 }
 
 .githubicon {
